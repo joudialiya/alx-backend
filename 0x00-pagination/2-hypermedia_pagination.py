@@ -44,11 +44,12 @@ class Server:
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         """Returne page with metadata"""
         data = self.get_page(page, page_size)
+        total_pages = math.ceil(len(self.dataset()) / page_size)
         res = {}
         res['page_size'] = len(data)
         res['page'] = page
         res['data'] = data
-        res['next_page'] = page + 1
-        res['prev_page'] = page - 1
-        res['total_pages'] = math.ceil(len(self.dataset()) / page_size)
+        res['next_page'] = page + 1 if page + 1 <= total_pages else None
+        res['prev_page'] = page - 1 if (page - 1 != 0) else None
+        res['total_pages'] = total_pages
         return res

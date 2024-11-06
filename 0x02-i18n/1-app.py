@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
+"""Basic app"""
 import flask
 from flask_babel import Babel
-"""Basic app"""
 
 
 class Config:

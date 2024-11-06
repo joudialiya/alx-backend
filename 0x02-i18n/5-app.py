@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
+"""Basic app"""
 from flask import request, Flask, render_template, g
 from flask_babel import Babel
-import requests
-"""Basic app"""
+
 
 users = {
     1: {"name": "Balou", "locale": "fr", "timezone": "Europe/Paris"},

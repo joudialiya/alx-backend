@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-import flask
 """Basic app"""
+import flask
 
 
 app = flask.Flask(__name__)

@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Basic flask web app"""
+"""
+Basic flask web app with a simple template
+"""
 import flask
 
 
